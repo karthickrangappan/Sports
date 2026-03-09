@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Elite Sports Palette */
+  --color-primary: #0f172a;
+  /* Deep Navy Slate */
+  --color-accent: #c9a84c;
+  /* Energetic Sky Blue */
+  --color-secondary: #c9a84c;
+  /* High-Performance Rose/Red */
+  --color-dark: #020617;
+  /* Rich Midnight */
+  --color-light: #f8fafc;
+  /* Clean White/Slate */
+  --color-success: #10b981;
+  /* Energetic Green */
+
+  --font-family-outfit: "Outfit", sans-serif;
+
+  --background-image-hero-pattern: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop');
+
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+@layer base {
+  :root {
+    font-family: var(--font-family-outfit);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-primary text-white rounded-xl font-bold transition-all duration-300 hover:bg-primary/90 hover:shadow-xl hover:-translate-y-0.5 active:scale-95 border border-transparent;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 bg-accent text-primary rounded-xl font-bold transition-all duration-300 hover:bg-accent/90 hover:shadow-xl hover:-translate-y-0.5 active:scale-95 border border-transparent;
+  }
+
+  .btn-outline {
+    @apply px-8 py-3 bg-transparent text-primary border-2 border-primary/20 rounded-xl font-bold transition-all duration-300 hover:border-primary hover:bg-primary/5 active:scale-95;
+  }
+
+  .nav-link {
+    @apply text-dark/70 font-semibold hover:text-primary transition-all duration-200 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-black text-primary text-center mb-12 tracking-tighter uppercase italic;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl rounded-2xl border border-transparent hover:border-accent/10;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+}
