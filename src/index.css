@@ -11,7 +11,7 @@
 
   --font-family-outfit: "Outfit", sans-serif;
 
-  --background-image-hero-pattern: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop');
+  --background-image-hero-pattern: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.45)), url('./assets/cricket-hero.png');
 
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);

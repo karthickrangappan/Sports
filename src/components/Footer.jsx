@@ -4,86 +4,95 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white pt-12 pb-10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                    <div className="space-y-6">
-                        <Link to="/" className="flex-shrink-0 flex items-center gap-2 group cursor-pointer">
-                            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center transform -rotate-6 shadow-md group-hover:rotate-0 transition-transform duration-300">
-                                <span className="text-white text-xl font-black italic">S</span>
+        <footer className="bg-[#0A0A0A] text-white pt-20 pb-12 overflow-hidden">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
+                    
+                    {/* Brand Section */}
+                    <div className="space-y-8">
+                        <Link to="/" className="inline-flex items-center gap-3 group">
+                            <div className="w-11 h-11 bg-primary rounded-xl flex items-center justify-center transform -rotate-6 shadow-xl group-hover:rotate-0 transition-all duration-500">
+                                <span className="text-white text-2xl font-black italic">S</span>
                             </div>
-                            <h1 className="text-2xl font-black text-accent tracking-tighter">
-                                SPORT<span className="text-primary italic">HUB</span>
+                            <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tighter italic">
+                                SPORT<span className="text-primary">HUB</span>
                             </h1>
                         </Link>
-                        <p className="text-gray-400 leading-relaxed">
-                            Your ultimate destination for professional sports equipment and performance gear. Level up your performance today.
+                        <p className="text-gray-500 text-base leading-relaxed font-medium max-w-xs">
+                            Equipping the next generation of elite athletes with the world's most innovative performance gear.
                         </p>
-                        <div className="flex space-x-4">
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                                <FaFacebookF />
-                            </a>
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                                <FaTwitter />
-                            </a>
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                                <FaInstagram />
-                            </a>
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                                <FaYoutube />
-                            </a>
+                        <div className="flex gap-4">
+                            {[FaFacebookF, FaTwitter, FaInstagram, FaYoutube].map((Icon, i) => (
+                                <a key={i} href="#" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
+                                    <Icon size={14} />
+                                </a>
+                            ))}
                         </div>
                     </div>
 
+                    {/* Links - Scalable Grid */}
                     <div>
-                        <h3 className="text-xl font-bold mb-6 border-l-4 border-primary pl-4">Quick Links</h3>
-                        <ul className="space-y-4 text-gray-400">
-                            <li><a href="#" className="hover:text-primary transition-colors">Find a Store</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Special Offers</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Gift Cards</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Sustainability</a></li>
+                        <h3 className="text-xs font-black uppercase tracking-[0.3em] text-accent mb-8">Navigation</h3>
+                        <ul className="space-y-4">
+                            {['Shop All', 'Performance Gear', 'Elite Training', 'Limited Editions', 'Sustainability'].map((item) => (
+                                <li key={item}>
+                                    <a href="#" className="text-gray-500 hover:text-white text-sm font-black uppercase tracking-widest transition-colors flex items-center gap-2 group">
+                                        <span className="w-0 group-hover:w-4 h-[2px] bg-primary transition-all duration-300"></span>
+                                        {item}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     <div>
-                        <h3 className="text-xl font-bold mb-6 border-l-4 border-primary pl-4">Support</h3>
-                        <ul className="space-y-4 text-gray-400">
-                            <li><a href="#" className="hover:text-primary transition-colors">Help Center</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Order Tracking</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Returns & Refunds</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Shipping Info</a></li>
-                            <li><Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
+                        <h3 className="text-xs font-black uppercase tracking-[0.3em] text-accent mb-8">Performance Hub</h3>
+                        <ul className="space-y-4">
+                            {['Order Tracking', 'Pro Members', 'Training Tips', 'Store Locator', 'Elite Support'].map((item) => (
+                                <li key={item}>
+                                    <a href="#" className="text-gray-500 hover:text-white text-sm font-black uppercase tracking-widest transition-colors flex items-center gap-2 group">
+                                        <span className="w-0 group-hover:w-4 h-[2px] bg-primary transition-all duration-300"></span>
+                                        {item}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
+                    {/* Newsletter */}
                     <div>
-                        <h3 className="text-xl font-bold mb-6 border-l-4 border-primary pl-4">Newsletter</h3>
-                        <p className="text-gray-400 mb-6">Subscribe to get latest updates and offers.</p>
+                        <h3 className="text-xs font-black uppercase tracking-[0.3em] text-accent mb-8">The Insider</h3>
+                        <p className="text-gray-500 text-sm mb-8 font-medium italic">Join 15k+ athletes receiving our weekly drops and training hacks.</p>
                         <form className="space-y-4">
-                            <div className="relative">
+                            <div className="relative group">
                                 <input
                                     type="email"
-                                    placeholder="Your Email"
-                                    className="w-full bg-white/10 border-none rounded-lg py-3 px-4 focus:ring-2 focus:ring-primary text-white"
+                                    placeholder="ATHLETE@EMAIL.COM"
+                                    className="w-full bg-white/5 border border-white/5 rounded-2xl py-4 px-6 focus:outline-none focus:ring-2 focus:ring-primary/50 text-[10px] sm:text-xs font-black tracking-widest text-white transition-all"
                                 />
                             </div>
-                            <button className="w-full btn-primary !rounded-lg py-3">
-                                Subscribe Now
+                            <button className="w-full bg-[#121212] hover:bg-primary text-white py-4 sm:py-5 rounded-2xl text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] transition-all shadow-xl active:scale-95">
+                                Join the Squad
                             </button>
                         </form>
                     </div>
                 </div>
 
-                <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm gap-6">
-                    <p>© 2024 SportHub. All rights reserved.</p>
-                    <div className="flex space-x-8">
-                        <a href="#" className="hover:text-white">Privacy Policy</a>
-                        <a href="#" className="hover:text-white">Terms of Service</a>
-                        <a href="#" className="hover:text-white">Cookie Policy</a>
+                {/* Bottom Bar */}
+                <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div className="flex items-center gap-10">
+                        <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest">© 2024 SPORT HUB ELITE PERFORMANCE</p>
+                    </div>
+                    <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
+                        {['Privacy', 'Terms', 'Cookies', 'Compliance'].map((item) => (
+                            <a key={item} href="#" className="text-[10px] font-black text-gray-600 hover:text-white uppercase tracking-widest transition-colors">{item}</a>
+                        ))}
                     </div>
                 </div>
             </div>
+            
+            {/* Edge Accent */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full translate-x-1/2 -translate-y-1/2 blur-[100px]"></div>
         </footer>
     );
 };
