@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { ShopContext } from '../Context/Shopcontext';
-import Pageheader from './Pageheader';
+import PageHeader from './PageHeader';
 import {
     FaBox,
     FaClock,
@@ -41,7 +41,7 @@ const Orders = () => {
     if (ordersLoading) {
         return (
             <div className="min-h-screen bg-gray-50">
-                <Pageheader />
+                <PageHeader />
                 <div className="max-w-7xl mx-auto px-4 py-20 flex flex-col items-center justify-center">
                     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4"></div>
                     <p className="text-gray-500 font-bold uppercase tracking-widest text-xs">Loading your orders...</p>
@@ -52,7 +52,7 @@ const Orders = () => {
 
     return (
         <div className="min-h-screen bg-gray-50 pb-20">
-            <Pageheader />
+            <PageHeader />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
                 <div className="mb-10 lg:mb-16">
@@ -61,11 +61,11 @@ const Orders = () => {
                 </div>
 
                 {orders.length === 0 ? (
-                    <div className="bg-white rounded-[3rem] p-16 lg:p-24 text-center border border-gray-100 shadow-xl shadow-gray-200/50 flex flex-col items-center max-w-2xl mx-auto">
+                    <div className="bg-white rounded-[3rem] p-8 sm:p-16 lg:p-24 text-center border border-gray-100 shadow-xl shadow-gray-200/50 flex flex-col items-center max-w-2xl mx-auto">
                         <div className="w-24 h-24 bg-gray-50 text-gray-200 rounded-full flex items-center justify-center mb-8">
                             <FaShoppingBag size={48} />
                         </div>
-                        <h2 className="text-3xl font-black text-gray-900 mb-4 italic tracking-tight uppercase">No Orders Yet</h2>
+                        <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-4 italic tracking-tight uppercase">No Orders Yet</h2>
                         <p className="text-gray-500 font-bold mb-10 max-w-sm">You haven't placed any orders yet. Start your sports journey today!</p>
                         <button
                             onClick={() => window.location.href = '/shop'}

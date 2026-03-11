@@ -5,7 +5,7 @@ import { products } from '../data/sportsData';
 import { IoStar, IoHeartOutline, IoHeartSharp, IoCartOutline, IoArrowBackOutline } from 'react-icons/io5';
 import { FiMinus, FiPlus, FiCheck } from 'react-icons/fi';
 import { toast } from 'react-hot-toast';
-import Pageheader from './Pageheader';
+import PageHeader from './PageHeader';
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -53,7 +53,7 @@ const ProductDetail = () => {
 
     return (
         <div className="min-h-screen bg-white">
-            <Pageheader />
+            <PageHeader />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <button
@@ -64,10 +64,10 @@ const ProductDetail = () => {
                     Back to Products
                 </button>
 
-                <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+                <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-20">
 
                     <div className="lg:w-1/2">
-                        <div className="relative aspect-square rounded-[3rem] bg-gray-50 p-12 flex items-center justify-center overflow-hidden group shadow-inner">
+                        <div className="relative aspect-square rounded-[3rem] bg-gray-50 p-6 sm:p-12 flex items-center justify-center overflow-hidden group shadow-inner">
                             <div className="absolute top-8 left-8">
                                 <span className="px-6 py-2 bg-white shadow-md rounded-full text-[12px] font-black text-primary uppercase tracking-[0.2em]">
                                     {product.category}
@@ -130,7 +130,7 @@ const ProductDetail = () => {
                                         <button
                                             key={size}
                                             onClick={() => setSelectedSize(size)}
-                                            className={`w-14 h-14 rounded-2xl flex items-center justify-center font-black transition-all duration-300 border-2 ${selectedSize === size
+                                            className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center font-black transition-all duration-300 border-2 ${selectedSize === size
                                                 ? 'bg-primary border-primary text-white shadow-xl shadow-primary/20 -translate-y-2'
                                                 : 'bg-white border-gray-100 text-gray-400 hover:border-primary hover:text-primary hover:bg-primary/5'
                                                 }`}
@@ -175,7 +175,7 @@ const ProductDetail = () => {
 
                             <button
                                 onClick={handleCartClick}
-                                className="flex-1 px-10 py-5 bg-primary text-white font-black italic text-lg rounded-[1.5rem] flex items-center justify-center gap-4 hover:bg-slate-800 transition-all shadow-2xl shadow-slate-200 active:scale-95 group"
+                                className="flex-1 px-6 py-4 sm:px-10 sm:py-5 bg-primary text-white font-black italic text-lg rounded-[1.5rem] flex items-center justify-center gap-4 hover:bg-slate-800 transition-all shadow-2xl shadow-slate-200 active:scale-95 group"
                             >
                                 <IoCartOutline size={24} className="group-hover:-translate-x-1 transition-transform" />
                                 ADD TO CART
@@ -183,7 +183,7 @@ const ProductDetail = () => {
 
                             <button
                                 onClick={handleWishlistClick}
-                                className={`w-20 h-20 flex items-center justify-center rounded-[1.5rem] border transition-all active:scale-90 ${isInWishlist ? 'bg-red-50 border-red-100 text-red-500 shadow-lg shadow-red-100' : 'bg-gray-50 border-gray-100 text-gray-400 hover:text-red-500 hover:border-red-100'}`}
+                                className={`w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-[1.5rem] border transition-all active:scale-90 ${isInWishlist ? 'bg-red-50 border-red-100 text-red-500 shadow-lg shadow-red-100' : 'bg-gray-50 border-gray-100 text-gray-400 hover:text-red-500 hover:border-red-100'}`}
                             >
                                 {isInWishlist ? <IoHeartSharp size={32} /> : <IoHeartOutline size={32} />}
                             </button>

@@ -1,15 +1,15 @@
 import React from 'react';
 import { FaAward, FaUsers, FaGlobe, FaChevronRight } from 'react-icons/fa';
 import storyImg from '../assets/about-story.png';
-import Pageheader from './Pageheader';
+import PageHeader from './PageHeader';
 
 const About = () => {
     return (
         <div className="bg-white overflow-hidden">
-            <Pageheader />
+            <PageHeader />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
                     <div className="relative">
                         <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
                             <img
@@ -47,14 +47,14 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="bg-primary text-white py-24">
+            <div className="bg-primary text-white py-16 md:py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-12 md:mb-20">
                         <h2 className="text-3xl md:text-5xl font-bold mb-6">Values That Drive Us</h2>
                         <div className="w-24 h-1 bg-accent mx-auto"></div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                         {[
                             {
                                 icon: <FaAward className="text-5xl text-accent mb-6" />,
@@ -84,8 +84,8 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16 gap-6">
                     <div className="max-w-xl">
                         <span className="text-accent font-bold tracking-widest uppercase text-sm">Leadership</span>
                         <h2 className="text-3xl md:text-4xl font-bold text-primary mt-4">The Minds Behind SportHub</h2>
@@ -95,7 +95,7 @@ const About = () => {
                     </button>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                     {[1, 2, 3, 4].map((member) => (
                         <div key={member} className="group">
                             <div className="aspect-[4/5] rounded-2xl bg-gray-100 overflow-hidden mb-6">

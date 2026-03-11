@@ -4,7 +4,7 @@ import { ShopContext } from '../Context/Shopcontext';
 import { toast } from 'react-hot-toast';
 import { FcGoogle } from 'react-icons/fc';
 import { FiMail, FiLock, FiArrowRight, FiEye, FiEyeOff } from 'react-icons/fi';
-import Pageheader from './Pageheader';
+import PageHeader from './PageHeader';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -48,12 +48,12 @@ const Login = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            <Pageheader />
-            <div className="max-w-md mx-auto py-16 px-4">
+            <PageHeader />
+            <div className="max-w-md mx-auto py-12 md:py-16 px-4">
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 transition-all hover:shadow-2xl">
                     <div className="p-8">
                         <div className="text-center mb-10">
-                            <h2 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h2>
+                            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Welcome Back</h2>
                             <p className="text-gray-500">Log in to your account to continue shopping</p>
                         </div>
 

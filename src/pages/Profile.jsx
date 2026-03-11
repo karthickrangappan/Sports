@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { ShopContext } from '../Context/Shopcontext';
 import { FaUser, FaEnvelope, FaShieldAlt, FaShoppingCart, FaEdit, FaCamera, FaShoppingBag, FaHeart, FaMapMarkerAlt, FaPlus, FaTrash, FaTimes } from 'react-icons/fa';
-import Pageheader from './Pageheader';
+import PageHeader from './PageHeader';
 import { toast } from 'react-hot-toast';
 
 const Profile = () => {
@@ -27,7 +27,7 @@ const Profile = () => {
 
     return (
         <div className="min-h-screen bg-gray-50 pb-20">
-            <Pageheader />
+            <PageHeader />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -37,19 +37,19 @@ const Profile = () => {
                             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[5rem] -mr-10 -mt-10 group-hover:scale-110 transition-transform duration-500" />
 
                             <div className="relative mb-8 inline-block">
-                                <div className="w-40 h-40 rounded-full border-4 border-white shadow-2xl overflow-hidden bg-gray-50 flex items-center justify-center">
+                                <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white shadow-2xl overflow-hidden bg-gray-50 flex items-center justify-center">
                                     {user.photoURL ? (
                                         <img src={user.photoURL} alt={user.displayName} className="w-full h-full object-cover" />
                                     ) : (
                                         <FaUser size={64} className="text-gray-200" />
                                     )}
                                 </div>
-                                <button className="absolute bottom-2 right-2 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                                <button className="absolute bottom-2 right-2 w-8 h-8 sm:w-10 sm:h-10 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
                                     <FaCamera size={16} />
                                 </button>
                             </div>
 
-                            <h2 className="text-3xl font-black text-gray-900 italic uppercase tracking-tighter mb-2 leading-none">
+                            <h2 className="text-2xl sm:text-3xl font-black text-gray-900 italic uppercase tracking-tighter mb-2 leading-none">
                                 {user.displayName || "Elite Athlete"}
                             </h2>
                             <p className="text-gray-400 font-bold uppercase text-[10px] tracking-[0.3em] mb-8">

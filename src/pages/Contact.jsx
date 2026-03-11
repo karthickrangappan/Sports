@@ -1,16 +1,15 @@
 import React from 'react';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaPaperPlane, FaClock } from 'react-icons/fa';
-import Pageheader from './Pageheader';
+import PageHeader from './PageHeader';
 
 const Contact = () => {
     return (
         <div className="bg-light overflow-hidden">
-            <Pageheader />
+            <PageHeader />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 relative z-20">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-                    {/* Contact Info Column */}
                     <div className="lg:col-span-4 space-y-6">
                         <div className="glass-card p-8 rounded-3xl space-y-8">
                             <h2 className="text-2xl font-black text-primary uppercase italic tracking-tight">HQ Station</h2>
@@ -70,12 +69,11 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    {/* Message Form Column */}
                     <div className="lg:col-span-8">
                         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-2xl border border-primary/5">
                             <div className="flex items-center gap-4 mb-10">
                                 <div className="h-1 w-12 bg-accent"></div>
-                                <h2 className="text-3xl font-black text-primary uppercase italic tracking-tighter">Submit Field Report</h2>
+                                <h2 className="text-2xl md:text-3xl font-black text-primary uppercase italic tracking-tighter">Submit Field Report</h2>
                             </div>
 
                             <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -125,8 +123,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            {/* Map Area */}
-            <div className="relative h-[500px] w-full mt-12 grayscale hover:grayscale-0 transition-all duration-1000 group">
+            <div className="relative h-[300px] md:h-[500px] w-full mt-8 md:mt-12 grayscale hover:grayscale-0 transition-all duration-1000 group">
                 <img
                     src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop"
                     alt="Map Location"

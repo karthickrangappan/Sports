@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ShopContext } from '../Context/Shopcontext';
 import { FaTrash, FaShoppingCart, FaHeartBroken, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import Pageheader from './Pageheader';
+import PageHeader from './PageHeader';
 
 const Wishlist = () => {
     const { wishlist, removeFromWishlist, addToCart } = useContext(ShopContext);
@@ -10,14 +10,14 @@ const Wishlist = () => {
     if (wishlist.length === 0) {
         return (
             <div className="min-h-screen bg-gray-50">
-                <Pageheader />
-                <div className="flex flex-col items-center justify-center text-center px-4 py-20">
+                <PageHeader />
+                <div className="flex flex-col items-center justify-center text-center px-4 py-16 sm:py-20">
                 <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-6 text-gray-300 shadow-sm animate-pulse">
                     <FaHeartBroken size={40} />
                 </div>
-                <h2 className="text-3xl font-black text-dark mb-2 italic tracking-tight">Your Wishlist is Empty</h2>
+                <h2 className="text-2xl sm:text-3xl font-black text-dark mb-2 italic tracking-tight">Your Wishlist is Empty</h2>
                 <p className="text-gray-500 mb-8 max-w-md">Looks like you haven't added any gear to your wishlist yet. Explore our collection and find your perfect match.</p>
-                <Link to="/shop" className="px-8 py-3 bg-primary text-white font-bold rounded-full shadow-lg hover:bg-orange-600 transition-all flex items-center gap-2 hover:scale-105 active:scale-95">
+                <Link to="/shop" className="px-6 py-3 sm:px-8 bg-primary text-white font-bold rounded-full shadow-lg hover:bg-orange-600 transition-all flex items-center gap-2 hover:scale-105 active:scale-95">
                     Start Shopping <FaArrowRight />
                 </Link>
                 </div>
@@ -27,7 +27,7 @@ const Wishlist = () => {
 
     return (
         <div className="min-h-screen bg-gray-50 pb-20">
-            <Pageheader />
+            <PageHeader />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

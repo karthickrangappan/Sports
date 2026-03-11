@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaTruck, FaShieldAlt, FaSync, FaHeadset, FaTools, FaLaptopCode, FaChevronRight } from 'react-icons/fa';
-import Pageheader from './Pageheader';
+import PageHeader from './PageHeader';
 
 const Services = () => {
     const services = [
@@ -44,10 +44,10 @@ const Services = () => {
 
     return (
         <div className="bg-light min-h-screen">
-            <Pageheader />
+            <PageHeader />
 
-            <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mb-20">
+            <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="mb-12 md:mb-20">
                     <h2 className="text-3xl md:text-5xl font-black text-primary leading-tight">
                         Our Specialized <br />Service Ecosystem
                     </h2>
@@ -89,8 +89,8 @@ const Services = () => {
                 </div>
             </section>
 
-            <section className="mb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="relative rounded-[3rem] bg-dark p-12 md:p-24 overflow-hidden border border-white/5">
+            <section className="mb-16 md:mb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="relative rounded-[3rem] bg-dark p-8 sm:p-12 md:p-24 overflow-hidden border border-white/5">
                     <div className="absolute inset-0 opacity-20">
                         <img
                             src="https://images.unsplash.com/photo-1541534741688-6078c64b5ca5?q=80&w=2069&auto=format&fit=crop"
@@ -102,14 +102,14 @@ const Services = () => {
 
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h2 className="text-4xl md:text-6xl font-black text-white leading-tight mb-8">
+                            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight mb-8">
                                 Need a Bespoke <br />
                                 <span className="text-accent italic">Sporting Solution?</span>
                             </h2>
                             <p className="text-gray-400 text-lg leading-relaxed mb-10">
                                 From large-scale tournament logistics to professional club infrastructure development, our specialized consultants are ready to help your organization reach its absolute peak.
                             </p>
-                            <button className="btn-secondary !px-12 !py-4 text-lg">
+                            <button className="btn-secondary !px-8 !py-3 sm:!px-12 sm:!py-4 text-base sm:text-lg">
                                 Start Consultation
                             </button>
                         </div>

@@ -1,7 +1,7 @@
 import React, { useState, useContext, useMemo } from 'react';
 import { ShopContext } from '../Context/Shopcontext';
 import { categories as sportsCategories } from '../data/sportsData';
-import Pageheader from './Pageheader';
+import PageHeader from './PageHeader';
 import { FaStar, FaThLarge, FaList, FaChevronDown, FaChevronUp, FaRupeeSign, FaPercent, FaFilter, FaRedo, FaPlus, FaMinus, FaShoppingCart, FaRegHeart, FaTimes } from 'react-icons/fa';
 import { IoEyeSharp } from "react-icons/io5";
 import { Link } from 'react-router-dom';
@@ -101,7 +101,7 @@ const Shop = () => {
 
     return (
         <div className="min-h-screen bg-gray-50 pb-20">
-            <Pageheader />
+            <PageHeader />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
@@ -417,11 +417,11 @@ const Shop = () => {
                                 })}
                             </div>
                         ) : (
-                            <div className="bg-white rounded-[3rem] p-20 text-center border border-gray-100 flex flex-col items-center justify-center">
+                            <div className="bg-white rounded-[3rem] p-10 sm:p-20 text-center border border-gray-100 flex flex-col items-center justify-center">
                                 <div className="w-24 h-24 bg-gray-50 text-gray-200 rounded-full flex items-center justify-center mb-6 text-4xl">
                                     <FaFilter />
                                 </div>
-                                <h2 className="text-3xl font-black italic text-gray-900 uppercase tracking-tighter mb-4">No Products Found</h2>
+                                <h2 className="text-2xl sm:text-3xl font-black italic text-gray-900 uppercase tracking-tighter mb-4">No Products Found</h2>
                                 <p className="text-gray-400 font-bold max-w-xs mx-auto mb-8">Try adjusting your filters or search criteria to find what you're looking for.</p>
                                 <button
                                     onClick={resetFilters}

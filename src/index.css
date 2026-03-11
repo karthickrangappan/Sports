@@ -2,19 +2,12 @@
 @import "tailwindcss";
 
 @theme {
-  /* Elite Sports Palette */
   --color-primary: #0f172a;
-  /* Deep Navy Slate */
   --color-accent: #c9a84c;
-  /* Energetic Sky Blue */
   --color-secondary: #c9a84c;
-  /* High-Performance Rose/Red */
   --color-dark: #020617;
-  /* Rich Midnight */
   --color-light: #f8fafc;
-  /* Clean White/Slate */
   --color-success: #10b981;
-  /* Energetic Green */
 
   --font-family-outfit: "Outfit", sans-serif;
 

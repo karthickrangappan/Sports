@@ -20,7 +20,7 @@ import Checkout from './pages/Checkout';
 import Orders from './pages/Orders';
 import Profile from './pages/Profile';
 import Shipping from './pages/Admin/Shipping';
-import Inventery from './pages/Admin/Inventery';
+import Inventory from './pages/Admin/Inventory';
 import { Toaster } from 'react-hot-toast';
 
 function App() {
@@ -45,7 +45,7 @@ function App() {
             <Route path="/admin/add-product" element={<AddProduct />} />
             <Route path="/admin/remove-product" element={<RemoveProducts />} />
             <Route path="/admin/shipping" element={<Shipping />} />
-            <Route path="/admin/inventory" element={<Inventery />} />
+            <Route path="/admin/inventory" element={<Inventory />} />
             <Route path="/checkout" element={<Private><Checkout /></Private>} />
             <Route path="/orders" element={<Private><Orders /></Private>} />
             <Route path="/profile" element={<Private><Profile /></Private>} />

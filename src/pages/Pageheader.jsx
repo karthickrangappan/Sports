@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-const Pageheader = () => {
+const PageHeader = () => {
     const location = useLocation();
 
     if (location.pathname === "/") return null;
@@ -67,6 +67,14 @@ const Pageheader = () => {
             title: "Stock Control",
             subtitle: "Optimize Product Inventory",
         },
+        "/admin/add-product": {
+            title: "Add New Product",
+            subtitle: "Inventory Management",
+        },
+        "/admin/remove-product": {
+            title: "Remove Products",
+            subtitle: "Catalog Cleanup",
+        },
     };
 
     const page = pages[location.pathname];
@@ -74,17 +82,17 @@ const Pageheader = () => {
     if (!page) return null;
 
     return (
-        <div className="relative py-16 md:py-24 bg-[#aaa692] overflow-hidden border-b border-gray-100">
+        <div className="relative py-12 sm:py-16 md:py-24 bg-[#aaa692] overflow-hidden border-b border-gray-100">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#c9a84c]/5 rounded-bl-[10rem] -mr-20 -mt-20 pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#121212]/5 rounded-tr-[8rem] -ml-16 -mb-16 pointer-events-none" />
 
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
                 <div className="flex flex-col items-center text-center">
-                    <span className="text-[10px] font-bold tracking-[0.4em] uppercase pt-10 text-[#161208] mb-3 block opacity-80">
+                    <span className="text-[10px] font-bold tracking-[0.4em] uppercase pt-6 sm:pt-10 text-[#161208] mb-2 sm:mb-3 block opacity-80">
                         {page.subtitle}
                     </span>
 
-                    <h1 className="text-4xl md:text-7xl font-black text-[#121212] tracking-tighter leading-tight italic mb-3">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-[#121212] tracking-tighter leading-tight italic mb-4 sm:mb-6">
                         {page.title}
                     </h1>
 
@@ -99,4 +107,4 @@ const Pageheader = () => {
     );
 };
 
-export default Pageheader;
+export default PageHeader;

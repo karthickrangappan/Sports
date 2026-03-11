@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ShopContext } from '../Context/Shopcontext';
 import { toast } from 'react-hot-toast';
 import { FiTrash2, FiMinus, FiPlus, FiArrowRight, FiShoppingCart, FiShoppingBag } from 'react-icons/fi';
-import Pageheader from './Pageheader';
+import PageHeader from './PageHeader';
 
 const Cart = () => {
     const { cartItems, removeFromCart, updateCartQuantity, user } = useContext(ShopContext);
@@ -15,17 +15,17 @@ const Cart = () => {
     if (!user) {
         return (
             <div className="min-h-screen bg-gray-50">
-                <Pageheader />
-                <div className="max-w-7xl mx-auto px-4 py-20 text-center">
-                    <div className="bg-white p-12 rounded-3xl shadow-xl border border-gray-100 max-w-lg mx-auto">
+                <PageHeader />
+                <div className="max-w-7xl mx-auto px-4 py-16 sm:py-20 text-center">
+                    <div className="bg-white p-8 sm:p-12 rounded-3xl shadow-xl border border-gray-100 max-w-lg mx-auto">
                         <div className="w-20 h-20 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
                             <FiShoppingBag size={40} />
                         </div>
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Please Login</h2>
-                        <p className="text-gray-500 mb-8 text-lg">You need to be logged in to view your shopping cart and continue your journey.</p>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Please Login</h2>
+                        <p className="text-gray-500 mb-8 text-base sm:text-lg">You need to be logged in to view your shopping cart and continue your journey.</p>
                         <Link
                             to="/login"
-                            className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-xl text-white bg-orange-600 hover:bg-orange-700 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-orange-200"
+                            className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border border-transparent text-base sm:text-lg font-bold rounded-xl text-white bg-orange-600 hover:bg-orange-700 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-orange-200"
                         >
                             Sign In Now <FiArrowRight className="ml-2" />
                         </Link>
@@ -38,17 +38,17 @@ const Cart = () => {
     if (cartItems.length === 0) {
         return (
             <div className="min-h-screen bg-gray-50">
-                <Pageheader />
-                <div className="max-w-7xl mx-auto px-4 py-20 text-center">
-                    <div className="bg-white p-12 rounded-3xl shadow-xl border border-gray-100 max-w-lg mx-auto">
+                <PageHeader />
+                <div className="max-w-7xl mx-auto px-4 py-16 sm:py-20 text-center">
+                    <div className="bg-white p-8 sm:p-12 rounded-3xl shadow-xl border border-gray-100 max-w-lg mx-auto">
                         <div className="w-20 h-20 bg-gray-100 text-gray-400 rounded-full flex items-center justify-center mx-auto mb-6">
                             <FiShoppingCart size={40} />
                         </div>
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Your Cart is Empty</h2>
-                        <p className="text-gray-500 mb-8 text-lg">Looks like you haven't added anything to your cart yet. Let's find some great gear!</p>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Your Cart is Empty</h2>
+                        <p className="text-gray-500 mb-8 text-base sm:text-lg">Looks like you haven't added anything to your cart yet. Let's find some great gear!</p>
                         <Link
                             to="/shop"
-                            className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-xl text-white bg-primary hover:bg-slate-800 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-slate-200"
+                            className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border border-transparent text-base sm:text-lg font-bold rounded-xl text-white bg-primary hover:bg-slate-800 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-slate-200"
                         >
                             Explore Products <FiArrowRight className="ml-2" />
                         </Link>
@@ -60,7 +60,7 @@ const Cart = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            <Pageheader />
+            <PageHeader />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="lg:grid lg:grid-cols-12 lg:gap-12 items-start">
